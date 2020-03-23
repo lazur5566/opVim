@@ -41,6 +41,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'fatih/vim-go'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'danilo-augusto/vim-afterglow'
+Plugin 'morhetz/gruvbox'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -154,16 +156,19 @@ set foldcolumn=1
 syntax enable 
 
 " Enable 256 colors palette in Gnome Terminal
-if $COLORTERM == 'gnome-terminal'
-    set t_Co=256
-endif
+"if $COLORTERM == 'gnome-terminal'
+"    set t_Co=256
+"endif
 
 try
-    colorscheme desert
+    "colorscheme desert
+    "colorscheme afterglow
+    colorscheme gruvbox
 catch
 endtry
+let g:gruvbox_contrast_dark = 'hard'
 
-set background=dark
+"set background=dark
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -349,10 +354,10 @@ map <leader>pp :setlocal paste!<cr>
 
 " Self customized
 set nu
-set hlsearch
 
-hi Search ctermbg=Blue
-hi Search ctermfg=Red
+"set hlsearch
+"hi Search ctermbg=Blue
+"hi Search ctermfg=Red
 set mouse=a
 set clipboard=unnamed
 let g:jedi#goto_command = "<leader>d"

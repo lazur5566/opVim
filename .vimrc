@@ -160,6 +160,7 @@ syntax enable
 "    set t_Co=256
 "endif
 
+set t_Co=256
 try
     "colorscheme desert
     "colorscheme afterglow
@@ -362,7 +363,7 @@ set mouse=a
 set clipboard=unnamed
 let g:jedi#goto_command = "<leader>d"
 let g:jedi#goto_definitions_command = "<C-]>"
-
+let g:go_fmt_command = "goimports"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
